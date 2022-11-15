@@ -1,0 +1,13 @@
+{%extends 'base.html' %}
+{% load crispy_forms_tags%}
+{% block title_block %}   
+Chat With Me
+{% endblock %}
+
+
+{% block body_block %}
+<h2> {{ output_msg }}</h2>
+<br>
+<a href="{% url 'app_blog:chat'%}"><b>Go Back!!</b> </a>
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{%extends 'base.html' %}
+{% load crispy_forms_tags%}
+{% block title_block %}   
+Chat With Me
+{% endblock %}
+
+
+{% block body_block %}
+<h2> Enter Message </h2>
+<form method="POST" enctype="multipart/form-data">
+{{ forms|crispy}}
+{%csrf_token%}
+<button type="submit" class="btn btn-danger btn-sm">Send</button>
+</form>
+{% endblock %}
